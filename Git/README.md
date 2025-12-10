@@ -24,19 +24,20 @@
 7. [🚫 Gitignore & Cleaning](#-7-git-ignore--cleaning)
 8. [🧠 Advanced Git Operations](#-8-advanced-operations)
 9. [🎯 Common Interview Questions](#-9-common-interview-questions-straightforward-answers)
-10. [📎 Footer](#-footer)
+10. [👤 Author](#-author)
+11. [❤️ Footer](#️-footer)
 
 ---
 
 # 🟦 **1. Git Installation & Setup (BASIC)**
 
-| Command                                            | Explanation                 |
-| -------------------------------------------------- | --------------------------- |
-| `git --version`                                    | Checks if Git is installed. |
-| `git config --global user.name "Your Name"`        | Sets global username.       |
-| `git config --global user.email "you@example.com"` | Sets global email.          |
-| `git config --list`                                | Shows all Git configs.      |
-| `git help <command>`                               | Shows help for a command.   |
+| Command                                            | Explanation                |
+| -------------------------------------------------- | -------------------------- |
+| `git --version`                                    | Check if Git is installed. |
+| `git config --global user.name "Your Name"`        | Set global username.       |
+| `git config --global user.email "you@example.com"` | Set global email.          |
+| `git config --list`                                | View all Git configs.      |
+| `git help <command>`                               | Git help for a command.    |
 
 ---
 
@@ -44,19 +45,19 @@
 
 ## **BASIC**
 
-| Command                       | Explanation                    |
-| ----------------------------- | ------------------------------ |
-| `git init`                    | Creates a new Git repository.  |
-| `git clone <repo-url>`        | Copies a remote repo locally.  |
-| `git remote -v`               | Lists connected remotes.       |
-| `git remote add origin <url>` | Connects local repo to GitHub. |
+| Command                       | Explanation                   |
+| ----------------------------- | ----------------------------- |
+| `git init`                    | Create a new repo.            |
+| `git clone <repo-url>`        | Clone a remote repo.          |
+| `git remote -v`               | List remotes.                 |
+| `git remote add origin <url>` | Connect local repo to GitHub. |
 
 ## **INTERMEDIATE**
 
-| Command                               | Explanation         |
-| ------------------------------------- | ------------------- |
-| `git remote remove origin`            | Removes a remote.   |
-| `git remote set-url origin <new-url>` | Changes remote URL. |
+| Command                               | Explanation        |
+| ------------------------------------- | ------------------ |
+| `git remote remove origin`            | Remove remote.     |
+| `git remote set-url origin <new-url>` | Update remote URL. |
 
 ---
 
@@ -64,30 +65,30 @@
 
 ## **BASIC**
 
-| Command               | Explanation                |
-| --------------------- | -------------------------- |
-| `git status`          | Shows changes.             |
-| `git add <file>`      | Stages a file.             |
-| `git add .`           | Stages all modified files. |
-| `git commit -m "msg"` | Creates a commit.          |
-| `git log`             | Shows commit history.      |
+| Command               | Explanation         |
+| --------------------- | ------------------- |
+| `git status`          | Show changed files. |
+| `git add <file>`      | Stage a file.       |
+| `git add .`           | Stage all files.    |
+| `git commit -m "msg"` | Make a commit.      |
+| `git log`             | Commit history.     |
 
 ## **INTERMEDIATE**
 
-| Command                | Explanation                   |
-| ---------------------- | ----------------------------- |
-| `git commit -am "msg"` | Adds + commits tracked files. |
-| `git diff`             | Shows unstaged changes.       |
-| `git diff --staged`    | Shows staged changes.         |
-| `git log --oneline`    | Compact commit history.       |
+| Command                | Explanation                 |
+| ---------------------- | --------------------------- |
+| `git commit -am "msg"` | Add + commit tracked files. |
+| `git diff`             | Unstaged changes.           |
+| `git diff --staged`    | Staged changes.             |
+| `git log --oneline`    | Short commit history.       |
 
 ## **ADVANCED**
 
-| Command                     | Explanation                            |
-| --------------------------- | -------------------------------------- |
-| `git reset <file>`          | Unstages file.                         |
-| `git reset --hard <commit>` | Resets repo + deletes changes.         |
-| `git revert <commit>`       | Creates new commit undoing old commit. |
+| Command                     | Explanation              |
+| --------------------------- | ------------------------ |
+| `git reset <file>`          | Unstage file.            |
+| `git reset --hard <commit>` | Reset & delete changes.  |
+| `git revert <commit>`       | Reverse a commit safely. |
 
 ---
 
@@ -95,57 +96,57 @@
 
 ## **BASIC**
 
-| Command                    | Explanation                |
-| -------------------------- | -------------------------- |
-| `git branch`               | Lists branches.            |
-| `git branch <name>`        | Creates branch.            |
-| `git checkout <branch>`    | Switches branch.           |
-| `git checkout -b <branch>` | Creates + switches branch. |
+| Command                    | Explanation      |
+| -------------------------- | ---------------- |
+| `git branch`               | List branches.   |
+| `git branch <name>`        | Create branch.   |
+| `git checkout <branch>`    | Switch branch.   |
+| `git checkout -b <branch>` | Create & switch. |
 
 ## **INTERMEDIATE**
 
-| Command                  | Explanation            |
-| ------------------------ | ---------------------- |
-| `git merge <branch>`     | Merges given branch.   |
-| `git branch -d <branch>` | Deletes branch safely. |
-| `git branch -D <branch>` | Force deletes branch.  |
+| Command                  | Explanation         |
+| ------------------------ | ------------------- |
+| `git merge <branch>`     | Merge branch.       |
+| `git branch -d <branch>` | Safe delete branch. |
+| `git branch -D <branch>` | Force delete.       |
 
 ## **ADVANCED**
 
-| Command                    | Explanation                     |
-| -------------------------- | ------------------------------- |
-| `git rebase <branch>`      | Rewrites history cleanly.       |
-| `git cherry-pick <commit>` | Copy specific commit to branch. |
-| `git stash`                | Temporarily store changes.      |
-| `git stash apply`          | Restore stash.                  |
-| `git stash pop`            | Restore + delete stash.         |
+| Command                    | Explanation             |
+| -------------------------- | ----------------------- |
+| `git rebase <branch>`      | Linear clean history.   |
+| `git cherry-pick <commit>` | Copy a specific commit. |
+| `git stash`                | Save work temporarily.  |
+| `git stash apply`          | Restore stash.          |
+| `git stash pop`            | Restore + remove stash. |
 
 ---
 
 # 🟦 **5. Git Workflows (Feature, Release, Hotfix)**
 
-## **Feature Branch Workflow**
+### **Feature Branch**
 
-| Command                          | Explanation           |
-| -------------------------------- | --------------------- |
-| `git checkout -b feature/<name>` | Create feature branch |
-| `git push origin feature/<name>` | Push feature          |
-| `git merge feature/<name>`       | Merge feature         |
+| Command                          | Explanation |
+| -------------------------------- | ----------- |
+| `git checkout -b feature/<name>` | New feature |
+| `git push origin feature/<name>` | Upload      |
+| `git merge feature/<name>`       | Merge       |
 
-## **Release Workflow**
+### **Release Workflow**
 
-| Command                             | Explanation           |
-| ----------------------------------- | --------------------- |
-| `git checkout -b release/<version>` | Create release branch |
-| `git tag <tag>`                     | Tag a version         |
-| `git push origin --tags`            | Push all tags         |
+| Command                             | Explanation     |
+| ----------------------------------- | --------------- |
+| `git checkout -b release/<version>` | Release branch  |
+| `git tag <tag>`                     | Version tagging |
+| `git push origin --tags`            | Push all tags   |
 
-## **Hotfix Workflow**
+### **Hotfix Workflow**
 
-| Command                          | Explanation               |
-| -------------------------------- | ------------------------- |
-| `git checkout -b hotfix/<issue>` | Create hotfix branch      |
-| `git cherry-pick <commit>`       | Apply specific fix commit |
+| Command                          | Explanation      |
+| -------------------------------- | ---------------- |
+| `git checkout -b hotfix/<issue>` | Quick fix branch |
+| `git cherry-pick <commit>`       | Apply fix commit |
 
 ---
 
@@ -153,26 +154,26 @@
 
 ## **BASIC**
 
-| Command                    | Explanation          |
-| -------------------------- | -------------------- |
-| `git push origin <branch>` | Push branch.         |
-| `git pull`                 | Pull latest changes. |
-| `git fetch`                | Fetch without merge. |
+| Command                    | Explanation   |
+| -------------------------- | ------------- |
+| `git push origin <branch>` | Push changes. |
+| `git pull`                 | Pull & merge. |
+| `git fetch`                | Fetch only.   |
 
 ## **INTERMEDIATE**
 
-| Command                       | Explanation                |
-| ----------------------------- | -------------------------- |
-| `git pull origin <branch>`    | Pull specific branch.      |
-| `git push -u origin <branch>` | First push + set upstream. |
+| Command                       | Explanation                 |
+| ----------------------------- | --------------------------- |
+| `git pull origin <branch>`    | Pull specific branch.       |
+| `git push -u origin <branch>` | Push + set tracking branch. |
 
 ## **ADVANCED**
 
-| Command             | Explanation                          |
-| ------------------- | ------------------------------------ |
-| `git fetch --all`   | Fetch all branches.                  |
-| `git pull --rebase` | Clean pull with rebase.              |
-| `git push -f`       | Force push (rewrite remote history). |
+| Command             | Explanation             |
+| ------------------- | ----------------------- |
+| `git fetch --all`   | Fetch all branches.     |
+| `git pull --rebase` | Clean update.           |
+| `git push -f`       | Force push (dangerous). |
 
 ---
 
@@ -180,77 +181,77 @@
 
 ## **BASIC**
 
-| Action              | Explanation                  |
-| ------------------- | ---------------------------- |
-| Create `.gitignore` | Exclude files from tracking. |
+| Action              | Explanation           |
+| ------------------- | --------------------- |
+| Create `.gitignore` | Ignore unwanted files |
 
 ## **INTERMEDIATE**
 
-| Command                  | Explanation                          |
-| ------------------------ | ------------------------------------ |
-| `git rm --cached <file>` | Remove from tracking (keep locally). |
+| Command                  | Explanation                            |
+| ------------------------ | -------------------------------------- |
+| `git rm --cached <file>` | Remove from tracking (keep in system). |
 
 ## **ADVANCED**
 
 | Command        | Explanation             |
 | -------------- | ----------------------- |
-| `git clean -n` | Preview deletions.      |
+| `git clean -n` | Preview delete files.   |
 | `git clean -f` | Delete untracked files. |
 
 ---
 
 # 🟦 **8. Advanced Operations**
 
-| Command                       | Explanation                          |
-| ----------------------------- | ------------------------------------ |
-| `git reflog`                  | Shows all actions including removed. |
-| `git bisect`                  | Find bug using binary search.        |
-| `git submodule add <url>`     | Add submodule repo.                  |
-| `git submodule update --init` | Init & update submodules.            |
+| Command                       | Explanation               |
+| ----------------------------- | ------------------------- |
+| `git reflog`                  | Full action history.      |
+| `git bisect`                  | Binary search for bugs.   |
+| `git submodule add <url>`     | Add sub-module repo.      |
+| `git submodule update --init` | Init + update submodules. |
 
 ---
 
 # 🟦 **9. Common Interview Questions (Straightforward Answers)**
 
-### **1. What is Git?**
+### 1️⃣ What is Git?
 
-A distributed version control system.
+A distributed version-control tool.
 
-### **2. Git vs GitHub?**
+### 2️⃣ Git vs GitHub?
 
-Git = VCS tool; GitHub = cloud hosting for Git repos.
+Git = tool, GitHub = hosting service.
 
-### **3. What is a commit?**
+### 3️⃣ What is a commit?
 
-A snapshot of your code.
+Snapshot of project.
 
-### **4. What is a branch?**
+### 4️⃣ What is a branch?
 
-A parallel line of development.
+Parallel line of development.
 
-### **5. Merge vs Rebase?**
+### 5️⃣ Merge vs Rebase?
 
-Merge = keeps history; Rebase = rewrites into clean linear history.
+Merge keeps history; rebase cleans history.
 
-### **6. What is a pull request?**
+### 6️⃣ What is a pull request?
 
-A request to merge your branch into another branch on remote.
+Request to merge code on remote.
 
-### **7. What is HEAD?**
+### 7️⃣ What is HEAD?
 
-Pointer to current branch/commit.
+Pointer to current commit.
 
-### **8. What is stash?**
+### 8️⃣ What is Git stash?
 
-Temporary storage of uncommitted work.
+Temporary storage of changes.
 
-### **9. What is a tag?**
+### 9️⃣ What is a tag?
 
-Permanent label for important commits.
+Permanent label for a version.
 
-### **10. What is cherry-pick?**
+### 🔟 What is cherry-pick?
 
-Copy a specific commit to another branch.
+Apply a specific commit elsewhere.
 
 ---
 
