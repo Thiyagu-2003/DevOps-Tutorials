@@ -1,7 +1,15 @@
 ---
 
-
 # 🔧 **Ansible Essentials – Complete Guide (Beginner → Advanced)**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Ansible-Commands-blue?logo=ansible" />
+  <img src="https://img.shields.io/badge/SysAdmin-Essentials-green" />
+  <img src="https://img.shields.io/badge/Level-Basic%20to%20Advanced-orange" />
+  <a href="https://github.com/Thiyagu-2003">
+    <img src="https://img.shields.io/badge/Made%20By-Thiyagu%20S-green?logo=github" />
+  </a>
+</p>
 
 ---
 
@@ -135,29 +143,50 @@ At massive scale, Ansible alone is not enough.
 
 ## 9. 🎯 Interview Questions & Answers
 
-1. What language is Ansible written in?
-   **Python**
+1. **What language is Ansible written in?**
 
-2. What language are playbooks written in?
-   **YAML**
+   → Python
 
-3. What architecture does Ansible use?
-   **Push-based**
+2. **Have you created a custom Ansible module?**
+   
+   → Yes, using Python (or explain conceptually if not)
+   
+3. **What language are playbooks written in?**
+ 
+   → YAML
 
-4. Does Ansible require agents?
-   **No**
+4. **What platforms does Ansible support?**
+   
+   → Linux (SSH) and Windows (WinRM)
+   
+5. **What mechanism does Ansible use?**
 
-5. Linux connection method?
-   **SSH**
+   → Push-based
 
-6. Windows connection method?
-   **WinRM**
+6. **Why choose Ansible over other configuration tools?**
+    
+   → Agentless, push-based, simple YAML, fast setup
+   
+7. **Does Ansible require agents?**
+    
+   → No
 
-7. Ad-hoc vs Playbook?
-   **Quick vs Structured automation**
+8. **How does Ansible connect to Linux nodes?**
+    
+   → SSH
 
-8. Cloud support?
-   **AWS, Azure, GCP**
+9. **How does Ansible connect to Windows nodes?**
+    
+   → WinRM
+
+10. **Does Ansible support cloud providers?**
+    
+    → Yes, all major cloud providers (AWS, Azure, GCP)
+    Requirement: Public IP + SSH (Linux) or WinRM (Windows)
+
+11. **Difference between Ad-hoc commands and Playbooks?**
+    
+    → Ad-hoc = quick tasks, Playbook = structured automation
 
 ---
 
@@ -265,3 +294,4 @@ Country : India 🇮🇳
 </p>
 
 ---
+
