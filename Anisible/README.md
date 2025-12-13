@@ -36,6 +36,7 @@
 
 ---
 
+<a id="1-configuration-management-overview"></a>
 ## 1. 🔧 Configuration Management Overview
 
 ### 1.1 Configuration Management Tools
@@ -48,6 +49,7 @@ Configuration management ensures **consistent system state**, **repeatable deplo
 
 ---
 
+<a id="2-why-ansible"></a>
 ## 2. ❓ Why Ansible?
 
 Ansible uses a **push-based architecture**.
@@ -60,6 +62,7 @@ This is why Ansible is simple, fast to adopt, and widely used.
 
 ---
 
+<a id="3-ansible-basics"></a>
 ## 3. 📄 Ansible Basics
 
 * Automation logic is written in **Playbooks**
@@ -71,6 +74,7 @@ If your automation has more than one step and you’re still using ad-hoc comman
 
 ---
 
+<a id="4-puppet-vs-ansible"></a>
 ## 4. ⚖️ Puppet vs Ansible
 
 | Feature        | Puppet         | Ansible                      |
@@ -85,6 +89,7 @@ If your automation has more than one step and you’re still using ad-hoc comman
 
 ---
 
+<a id="5-key-advantages-of-ansible"></a>
 ## 5. 🧠 Key Advantages of Ansible
 
 * Agentless → zero footprint
@@ -96,6 +101,7 @@ If your automation has more than one step and you’re still using ad-hoc comman
 
 ---
 
+<a id="6-ansible-modules"></a>
 ## 6. 🧩 Ansible Modules
 
 * Modules are execution units
@@ -107,9 +113,11 @@ Writing shell scripts instead of modules is technical debt.
 
 ---
 
+<a id="7-ad-hoc-commands-vs-playbooks"></a>
 ## 7. 📌 Ad-hoc Commands vs Playbooks
 
 ### 7.1 Ad-hoc Commands
+
 * One-time actions
 * No reusability
 * No state tracking
@@ -131,6 +139,8 @@ ansible all -m shell -a "uptime"
 
 ---
 
+<a id="8-limitations-of-ansible"></a>
+
 ## 8. ❌ Limitations of Ansible
 
 * Windows support is weaker than Linux
@@ -141,60 +151,54 @@ At massive scale, Ansible alone is not enough.
 
 ---
 
+<a id="9-interview-questions--answers"></a>
+
 ## 9. 🎯 Interview Questions & Answers
 
 1. **What language is Ansible written in?**
-
    → Python
 
 2. **Have you created a custom Ansible module?**
-   
    → Yes, using Python (or explain conceptually if not)
-   
+
 3. **What language are playbooks written in?**
- 
    → YAML
 
 4. **What platforms does Ansible support?**
-   
    → Linux (SSH) and Windows (WinRM)
-   
-5. **What mechanism does Ansible use?**
 
+5. **What mechanism does Ansible use?**
    → Push-based
 
 6. **Why choose Ansible over other configuration tools?**
-    
    → Agentless, push-based, simple YAML, fast setup
-   
+
 7. **Does Ansible require agents?**
-    
    → No
 
 8. **How does Ansible connect to Linux nodes?**
-    
    → SSH
 
 9. **How does Ansible connect to Windows nodes?**
-    
    → WinRM
 
 10. **Does Ansible support cloud providers?**
-    
-    → Yes, all major cloud providers (AWS, Azure, GCP)
-    Requirement: Public IP + SSH (Linux) or WinRM (Windows)
+    → Yes, AWS, Azure, GCP
 
 11. **Difference between Ad-hoc commands and Playbooks?**
-    
     → Ad-hoc = quick tasks, Playbook = structured automation
 
 ---
+
+<a id="10-hands-on--part-1-ansible-with-multiple-ec2-instances"></a>
 
 ## 10. 🛠️ Hands-on – Part 1: Ansible with Multiple EC2 Instances
 
 > This is mandatory. If this fails, Ansible will not work.
 
 ---
+
+<a id="101-install-ansible-on-control-node"></a>
 
 ### 10.1 Install Ansible on Control Node
 
@@ -205,6 +209,8 @@ ansible --version
 ```
 
 ---
+
+<a id="102-configure-passwordless-ssh"></a>
 
 ### 10.2 Configure Passwordless SSH
 
@@ -243,6 +249,8 @@ chmod 600 ~/.ssh/authorized_keys
 
 ---
 
+<a id="103-test-ssh-connectivity"></a>
+
 ### 10.3 Test SSH Connectivity
 
 ```bash
@@ -252,6 +260,8 @@ ssh ubuntu@<TARGET_PUBLIC_IP>
 If it asks for a password, your setup is broken.
 
 ---
+
+<a id="104-create-inventory-file"></a>
 
 ### 10.4 Create Inventory File
 
@@ -266,6 +276,8 @@ nano inventory
 
 ---
 
+<a id="105-run-first-ad-hoc-command"></a>
+
 ### 10.5 Run First Ad-hoc Command
 
 ```bash
@@ -275,6 +287,8 @@ ansible -i inventory all -m shell -a "touch devopsclass"
 If this works, your Ansible setup is correct.
 
 ---
+
+<a id="11-author"></a>
 
 ## 11. 👤 Author
 
@@ -294,4 +308,3 @@ Country : India 🇮🇳
 </p>
 
 ---
-
