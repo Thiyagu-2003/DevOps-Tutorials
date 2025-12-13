@@ -1,31 +1,20 @@
----
-
 # 🔧 **Ansible Essentials – Complete Guide (Beginner → Advanced)**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Ansible-Commands-blue?logo=ansible" />
-  <img src="https://img.shields.io/badge/SysAdmin-Essentials-green" />
-  <img src="https://img.shields.io/badge/Level-Basic%20to%20Advanced-orange" />
-  <a href="https://github.com/Thiyagu-2003">
-    <img src="https://img.shields.io/badge/Made%20By-Thiyagu%20S-green?logo=github" />
-  </a>
-</p>
-
 ---
 
-## 📚 Table of Contents
+## 📚 **Table of Contents**
 
-1. [Configuration Management Overview](#-configuration-management-overview)
-2. [Why Ansible?](#-why-ansible)
-3. [Ansible Basics](#-ansible-basics)
-4. [Puppet vs Ansible](#-puppet-vs-ansible)
-5. [Key Advantages](#-key-advantages-of-ansible)
-6. [Ansible Modules](#-ansible-modules)
-7. [Ad-hoc Commands vs Playbooks](#-ad-hoc-commands-vs-playbooks)
-8. [Limitations of Ansible](#-limitations-of-ansible)
-9. [Interview Questions](#-interview-questions--answers)
-10. [Hands-on: Ansible with EC2](#-hands-on-ansible-with-multiple-ec2-instances)
-11. [Author & Footer](#-author)
+1. [🔧 Configuration Management Overview](#configuration-management-overview)
+2. [❓ Why Ansible?](#why-ansible)
+3. [📄 Ansible Basics](#ansible-basics)
+4. [⚖️ Puppet vs Ansible](#puppet-vs-ansible)
+5. [🧠 Key Advantages of Ansible](#key-advantages-of-ansible)
+6. [🧩 Ansible Modules](#ansible-modules)
+7. [📌 Ad-hoc Commands vs Playbooks](#ad-hoc-commands-vs-playbooks)
+8. [❌ Limitations of Ansible](#limitations-of-ansible)
+9. [🎯 Interview Questions & Answers](#interview-questions--answers)
+10. [🛠️ Hands-on: Ansible with Multiple EC2 Instances](#hands-on-ansible-with-multiple-ec2-instances)
+11. [👤 Author](#author)
 
 ---
 
@@ -47,7 +36,7 @@ Configuration management ensures **consistent system state**, **repeatable deplo
 
 * You define configurations on a **control node**
 * Changes are **pushed to target nodes** over SSH / WinRM
-* No agents. No polling. No background daemons.
+* No agents. No polling. No background daemons
 
 Think Git push, not cron-based pulling. This simplicity is the real reason Ansible wins.
 
@@ -142,37 +131,36 @@ If you’re managing tens of thousands of nodes, Ansible alone isn’t enough.
 ## 🎯 Interview Questions & Answers
 
 1. **What language is Ansible written in?**
-   → Python
+   Python
 
-2. **Have you created a custom Ansible module?**
-   → Yes, using Python (or explain conceptually if not)
+2. **What language are playbooks written in?**
+   YAML
 
-3. **What platforms does Ansible support?**
-   → Linux (SSH) and Windows (WinRM)
+3. **What mechanism does Ansible use?**
+   Push-based
 
-4. **Why choose Ansible over other configuration tools?**
-   → Agentless, push-based, simple YAML, fast setup
+4. **Does Ansible require agents?**
+   No
 
-5. **What mechanism does Ansible use?**
-   → Push mechanism
+5. **How does Ansible connect to Linux nodes?**
+   SSH
 
-6. **What language is used to write playbooks?**
-   → YAML
+6. **How does Ansible connect to Windows nodes?**
+   WinRM
 
-7. **Does Ansible support cloud providers?**
-   → Yes, all major cloud providers (AWS, Azure, GCP)
-   Requirement: Public IP + SSH (Linux) or WinRM (Windows)
+7. **Ad-hoc vs Playbooks?**
+   Ad-hoc = quick tasks, Playbooks = structured automation
 
-8. **Difference between Ad-hoc commands and Playbooks?**
-   → Ad-hoc = quick tasks, Playbook = structured automation
+8. **Does Ansible support cloud providers?**
+   Yes — AWS, Azure, GCP
 
 ---
 
-
-
 ## 🛠️ Hands-on: Ansible with Multiple EC2 Instances
 
-### 1️⃣ Install Ansible on Control Node
+> ⚠️ This section is **non-negotiable**. If this setup fails, Ansible will not work. Period.
+
+### 🟢 Step 1: Install Ansible on Control Node
 
 ```bash
 sudo apt update
@@ -182,7 +170,7 @@ ansible --version
 
 ---
 
-### 2️⃣ Configure Passwordless SSH (Critical Step)
+### 🔐 Step 2: Configure Passwordless SSH (Critical Step)
 
 #### On Control Node
 
@@ -197,12 +185,6 @@ This generates:
 
 **Never copy the private key. Ever.**
 
-Example public key format:
-
-```
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExampleKey ubuntu@control-node
-```
-
 Copy the public key:
 
 ```bash
@@ -211,9 +193,7 @@ cat ~/.ssh/id_ed25519.pub
 
 ---
 
-#### On Target EC2 Instance
-
-Edit authorized keys:
+#### 🖥️ On Target EC2 Instance
 
 ```bash
 nano ~/.ssh/authorized_keys
@@ -222,7 +202,7 @@ nano ~/.ssh/authorized_keys
 * **Do NOT delete existing keys**
 * Paste the new key on a **new line**
 
-Fix permissions (mandatory):
+Fix permissions:
 
 ```bash
 chmod 700 ~/.ssh
@@ -231,26 +211,17 @@ chmod 600 ~/.ssh/authorized_keys
 
 ---
 
-#### Test SSH (Proof It Works)
-
-From control node:
+#### **✅ Step 3: Test SSH**
 
 ```bash
 ssh ubuntu@<TARGET_PUBLIC_IP>
 ```
 
-If it asks for a password, you messed up.
-
-**Common mistakes:**
-
-* Copied private key ❌
-* Wrong user (`ubuntu` vs `ec2-user`) ❌
-* Broken line breaks ❌
-* Wrong permissions ❌
+If it asks for a password, the setup is wrong.
 
 ---
 
-### 3️⃣ Create Inventory File (Control Node)
+### 🗂️ Step 4: Create Inventory File
 
 ```bash
 nano inventory
@@ -263,7 +234,7 @@ nano inventory
 
 ---
 
-### 4️⃣ Run Ad-hoc Command (Control Node)
+### 🚀 Step 5: Run Ad-hoc Command
 
 ```bash
 ansible -i inventory all -m shell -a "touch devopsclass"
@@ -285,10 +256,6 @@ Country: India 🇮🇳
 
 ## ❤️ Footer
 
-<p align="center">
-  <strong>Made with ❤️ by <a href="https://github.com/Thiyagu-2003">Thiyagu S</a></strong><br>
-  Learning • Building • Improving
-</p>
+
 
 ---
-
