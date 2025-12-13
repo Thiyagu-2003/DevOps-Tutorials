@@ -156,37 +156,50 @@ At massive scale, Ansible alone is not enough.
 ## 9. 🎯 Interview Questions & Answers
 
 1. **What language is Ansible written in?**
+
    → Python
 
 2. **Have you created a custom Ansible module?**
+   
    → Yes, using Python (or explain conceptually if not)
-
+   
 3. **What language are playbooks written in?**
+ 
    → YAML
 
 4. **What platforms does Ansible support?**
+   
    → Linux (SSH) and Windows (WinRM)
-
+   
 5. **What mechanism does Ansible use?**
+
    → Push-based
 
 6. **Why choose Ansible over other configuration tools?**
+    
    → Agentless, push-based, simple YAML, fast setup
-
+   
 7. **Does Ansible require agents?**
+    
    → No
 
 8. **How does Ansible connect to Linux nodes?**
+    
    → SSH
 
 9. **How does Ansible connect to Windows nodes?**
+    
    → WinRM
 
 10. **Does Ansible support cloud providers?**
-    → Yes, AWS, Azure, GCP
+    
+    → Yes, all major cloud providers (AWS, Azure, GCP)
+    Requirement: Public IP + SSH (Linux) or WinRM (Windows)
 
 11. **Difference between Ad-hoc commands and Playbooks?**
+    
     → Ad-hoc = quick tasks, Playbook = structured automation
+
 
 ---
 
@@ -231,7 +244,7 @@ cat ~/.ssh/id_ed25519.pub
 
 ---
 
-#### On Target EC2 Instance
+#### On Target EC2 Instance 🖥
 
 ```bash
 nano ~/.ssh/authorized_keys
@@ -251,7 +264,7 @@ chmod 600 ~/.ssh/authorized_keys
 
 <a id="103-test-ssh-connectivity"></a>
 
-### 10.3 Test SSH Connectivity
+### 10.3 Test SSH Connectivity 🧪🛜
 
 ```bash
 ssh ubuntu@<TARGET_PUBLIC_IP>
@@ -263,7 +276,7 @@ If it asks for a password, your setup is broken.
 
 <a id="104-create-inventory-file"></a>
 
-### 10.4 Create Inventory File
+### 10.4 Create Inventory File 📁
 
 ```bash
 nano inventory
@@ -278,7 +291,7 @@ nano inventory
 
 <a id="105-run-first-ad-hoc-command"></a>
 
-### 10.5 Run First Ad-hoc Command
+### 10.5 Run First Ad-hoc Command 💨
 
 ```bash
 ansible -i inventory all -m shell -a "touch devopsclass"
@@ -308,3 +321,4 @@ Country : India 🇮🇳
 </p>
 
 ---
+
