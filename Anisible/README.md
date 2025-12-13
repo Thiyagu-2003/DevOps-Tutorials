@@ -250,7 +250,7 @@ If it asks for a password, you messed up.
 
 ---
 
-### 3️⃣ Create Inventory File
+### 3️⃣ Create Inventory File (Control Node)
 
 ```bash
 nano inventory
@@ -263,7 +263,7 @@ nano inventory
 
 ---
 
-### 4️⃣ Run Ad-hoc Command
+### 4️⃣ Run Ad-hoc Command (Control Node)
 
 ```bash
 ansible -i inventory all -m shell -a "touch devopsclass"
@@ -291,3 +291,4 @@ Country: India 🇮🇳
 </p>
 
 ---
+
