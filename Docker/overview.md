@@ -245,17 +245,16 @@ At this point, you understand:
 ## 🐳 Docker – Containerize Your First App Tutorial
 
 <p align="center">
-
-[![🐳 Open Docker Tutorial](https://img.shields.io/badge/Open-Docker%20Tutorial-2563eb?style=for-the-badge&logo=docker)](./Docker/MY-Pothfolio-Docker-image/README.md)
-
+  <a href="https://github.com/<username>/DevOps-Tutorials/blob/main/Docker/MY-Pothfolio-Docker-image/README.md">
+    <img src="https://img.shields.io/badge/Open-Docker%20Tutorial-2563eb?style=for-the-badge&logo=docker" alt="Open Docker Tutorial"/>
+  </a>
 </p>
 
 **This tutorial covers:**
 
-- Building Docker images
-- Running containers
-- Pushing images to Docker Hub
-
+- ✅ Building Docker images  
+- ✅ Running containers  
+- ✅ Pushing images to Docker Hub  
 
 ---
 
@@ -278,6 +277,7 @@ GitHub   : Thiyagu-2003
 </p>
 
 ---
+
 
 
 
