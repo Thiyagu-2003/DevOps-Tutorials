@@ -1,16 +1,29 @@
 ---
 
+<div align="center">
+
 # 🐳 Dockerizing a Vite + React + Tailwind Application
+
+### Production-Ready Containerization Using Docker & Nginx
 
 ![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)
 ![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?logo=vite)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-Utility--First-38B2AC?logo=tailwindcss)
 ![Nginx](https://img.shields.io/badge/Nginx-Web_Server-green?logo=nginx)
+
 <a href="https://github.com/Thiyagu-2003">
-<img src="https://img.shields.io/badge/Made%20By-Thiyagu%20S-brightgreen?logo=github" />
+  <img src="https://img.shields.io/badge/Made%20By-Thiyagu%20S-brightgreen?logo=github" />
 </a>
 
+---
+
+<p align="center">
+A no-nonsense guide to Dockerizing a modern frontend stack  
+<strong>(Vite + React + Tailwind)</strong> the <strong>correct production way</strong>.
+</p>
+
+</div>
 
 ---
 
@@ -29,14 +42,16 @@ This is the approach you **should use in real projects and interviews**.
 
 ## 📑 Table of Contents
 
-1. [Production Approach (Correct Way)](#production-approach-correct-way)
-2. [Required `.dockerignore`](#required-dockerignore)
-3. [Production Dockerfile](#production-dockerfile)
-4. [Big Picture: How This Dockerfile Works](#big-picture-how-this-dockerfile-works)
-5. [Stage 1: Build the App (Node.js)](#stage-1-build-the-app-nodejs)
-6. [Stage 2: Serve the App (Nginx)](#stage-2-serve-the-app-nginx)
-7. [Final Result](#final-result)
-8. [Brutal Checkpoint](#brutal-checkpoint)
+- [✅ Production Approach (Correct Way)](#-production-approach-correct-way)
+- [⚠️ Required `.dockerignore`](#️-required-dockerignore)
+- [🧱 Production Dockerfile](#-production-dockerfile)
+- [🧠 Big Picture: How This Dockerfile Works](#-big-picture-how-this-dockerfile-works)
+- [🧱 Stage 1: Build the App (Node.js)](#-stage-1-build-the-app-nodejs)
+- [🚀 Stage 2: Serve the App (Nginx)](#-stage-2-serve-the-app-nginx)
+- [✅ Final Result](#-final-result)
+- [🧠 Brutal Checkpoint](#-brutal-checkpoint)
+- [👤 Author](#-author)
+- [❤️ Footer](#️-footer)
 
 ---
 
@@ -284,8 +299,6 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 
 ### 🔑 The Magic Line
 
-Read carefully:
-
 * `--from=builder` → Copy from Stage 1
 * `/app/dist` → Built static files
 * `/usr/share/nginx/html` → Nginx web root
@@ -329,7 +342,6 @@ If you remove this:
 
 * Container starts
 * Immediately stops
-* Because nothing is running
 
 Docker containers **must** have a foreground process.
 
@@ -372,18 +384,18 @@ If you can’t say this confidently — reread this document.
 
 ---
 
-# 👤 **Author**
+## 👤 Author
 
 ```
-Name: Thiyagu S
-Role: Cloud & DevOps Learner
-Location: India 🇮🇳
-GitHub: Thiyagu-2003
+Name     : Thiyagu S
+Role     : Cloud & DevOps Learner
+Location : India 🇮🇳
+GitHub   : Thiyagu-2003
 ```
 
 ---
 
-# ❤️ **Footer**
+## ❤️ Footer
 
 <p align="center">
   <strong>Made with ❤️ by <a href="https://github.com/Thiyagu-2003">Thiyagu S</a></strong><br>
@@ -391,4 +403,3 @@ GitHub: Thiyagu-2003
 </p>
 
 ---
-
