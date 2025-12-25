@@ -12,7 +12,7 @@
 ![DevOps](https://img.shields.io/badge/DevOps-Foundations-orange)
 ![Beginner Friendly](https://img.shields.io/badge/Level-Beginner--Friendly-success)
 <a href="https://github.com/Thiyagu-2003">
-<img src="https://img.shields.io/badge/Made%20By-Thiyagu%20S-brightgreen?logo=github" />
+  <img src="https://img.shields.io/badge/Made%20By-Thiyagu%20S-brightgreen?logo=github" />
 </a>
 
 </div>
@@ -30,8 +30,8 @@
 - [📚 Docker Terminology](#-docker-terminology)
 - [🛠️ Install Docker](#️-install-docker)
 - [🚀 Containerize Your First App](#-containerize-your-first-app)
+- [👤 Author](#-author)
 - [❤️ Footer](#️-footer)
-- [👤 Author](#️-Author)
 
 ---
 
@@ -45,7 +45,7 @@ A **container** is a standard unit of software that packages:
 
 So the application runs **consistently** across environments.
 
-### In simple terms:
+### In simple terms
 
 > **Container = Application + Dependencies + Minimal OS support**
 
@@ -59,15 +59,15 @@ Unlike virtual machines, containers **do not bundle an entire operating system**
 
 | Feature | Containers | Virtual Machines |
 |------|-----------|-----------------|
-| OS | Share host kernel | Full OS per VM |
-| Size | MBs | GBs |
+| Operating System | Shared host kernel | Full OS per VM |
+| Image Size | MBs | GBs |
 | Startup Time | Seconds | Minutes |
 | Resource Usage | Low | High |
 | Portability | High | Medium |
 | Isolation | Process-level | Hardware-level |
 
 ✔ Containers are **lighter & faster**  
-✔ VMs provide **stronger isolation** but at a cost
+✔ VMs offer **stronger isolation**, but with higher overhead
 
 ---
 
@@ -76,17 +76,17 @@ Unlike virtual machines, containers **do not bundle an entire operating system**
 Containers are lightweight because they:
 
 - Share the **host OS kernel**
-- Include **only what the app needs**
-- Avoid bundling a full OS
+- Include **only what the application needs**
+- Avoid bundling a full operating system
 
 ### Real-world comparison
 
-| Image Type | Approx Size |
-|---------|-------------|
+| Image Type | Approximate Size |
+|----------|------------------|
 | Ubuntu Container Image | ~22 MB |
 | Ubuntu VM Image | ~2.3 GB |
 
-That’s nearly **100× smaller**.
+That’s almost **100× smaller**.
 
 ![Ubuntu Image Size](https://user-images.githubusercontent.com/43399466/217493284-85411ae0-b283-4475-9729-6b082e35fc7d.png)
 
@@ -98,11 +98,11 @@ That’s nearly **100× smaller**.
 
 /bin    → Essential binaries
 /sbin   → System binaries
-/etc    → Configurations
+/etc    → Configuration files
 /lib    → Shared libraries
 /usr    → User utilities
 /var    → Logs & runtime data
-/root   → Root home directory
+/root   → Root user home directory
 
 ````
 
@@ -111,11 +111,11 @@ That’s nearly **100× smaller**.
 ### 🧠 What Containers Borrow from the Host OS
 
 | Host Resource | Purpose |
-|-------------|---------|
+|--------------|---------|
 | Kernel | System calls & scheduling |
-| Networking | Connectivity |
-| Namespaces | Isolation |
-| cgroups | Resource limits |
+| Networking | Network connectivity |
+| Namespaces | Process & resource isolation |
+| cgroups | CPU & memory limits |
 | Filesystem | Mounts & volumes |
 
 Containers are **isolated**, but **not blindfolded**.
@@ -141,9 +141,10 @@ Docker is a **containerization platform** that allows you to:
 
 ![Docker Architecture](https://user-images.githubusercontent.com/43399466/217507877-212d3a60-143a-4a1d-ab79-4bb615cb4622.png)
 
-### Important truth
+### Hard truth
 
-If the **Docker daemon stops**, Docker is effectively **dead**.
+If the **Docker daemon stops**, Docker becomes useless.  
+The daemon **is the brain** of Docker.
 
 ---
 
@@ -151,38 +152,38 @@ If the **Docker daemon stops**, Docker is effectively **dead**.
 
 ![Docker Lifecycle](https://user-images.githubusercontent.com/43399466/217511949-81f897b2-70ee-41d1-b229-38d0572c54c7.png)
 
-### Core commands
+### Core commands you must know
 
 ```bash
-docker build   # Build image
-docker run     # Run container
+docker build   # Build an image
+docker run     # Run a container
 docker push    # Push image to registry
 ````
 
-These three commands are **non-negotiable knowledge**.
+If you don’t understand these three, you don’t understand Docker.
 
 ---
 
 ## 📚 Docker Terminology
 
-| Term          | Meaning                                |
-| ------------- | -------------------------------------- |
-| Docker Daemon | Background service managing containers |
-| Docker Client | CLI used to talk to daemon             |
-| Dockerfile    | Instructions to build an image         |
-| Image         | Read-only template                     |
-| Container     | Running instance of an image           |
-| Registry      | Stores images (Docker Hub, etc.)       |
+| Term          | Meaning                                    |
+| ------------- | ------------------------------------------ |
+| Docker Daemon | Background service managing Docker objects |
+| Docker Client | CLI used to interact with Docker           |
+| Dockerfile    | Instructions to build an image             |
+| Image         | Read-only template                         |
+| Container     | Running instance of an image               |
+| Registry      | Stores images (Docker Hub, etc.)           |
 
 ---
 
 ## 🛠️ Install Docker
 
-Official installation guide:
+Official installation guide (always trust this first):
 
 👉 [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
-### Example (Ubuntu / EC2)
+### Example: Ubuntu / AWS EC2
 
 ```bash
 sudo apt update
@@ -193,18 +194,20 @@ sudo apt install docker.io -y
 
 ### ▶️ Start Docker & Fix Permissions
 
+Start the daemon:
+
 ```bash
 sudo systemctl start docker
 sudo systemctl status docker
 ```
 
-Grant user access:
+Grant user permission:
 
 ```bash
 sudo usermod -aG docker ubuntu
 ```
 
-⚠️ Logout & login again — **mandatory**
+⚠️ **Logout and login again** — not optional.
 
 ---
 
@@ -221,38 +224,47 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
-If not — **fix permissions or daemon first**.
+If it fails, **fix the daemon or permissions first**.
+Docker is not broken — your setup is.
 
 ---
 
 ## 🚀 Containerize Your First App
 
-You now understand:
+At this point, you understand:
 
 * Containers
 * Docker
 * Images
 * Lifecycle
 
-👉 **Next step**: actually build something.
-
-<div align="center">
-
-<a href="https://docs.docker.com/get-started/">
-  <img src="https://img.shields.io/badge/🔥%20Start%20Containerizing%20Your%20First%20App-Now-blue?style=for-the-badge&logo=docker" />
-</a>
-
-</div>
+👉 Now stop reading and **build something**.
 
 ---
 
-# 👤 **Author**
+## 🐳 Docker – Containerize Your First App Tutorial
+
+<p align="center">
+  <a href="Docker/MY-Pothfolio-Docker-image/README.md">
+    <img src="https://img.shields.io/badge/🐳%20Open%20Docker%20Tutorial-2563eb?style=for-the-badge" />
+  </a>
+</p>
+
+**This tutorial covers:**
+
+* Building Docker images
+* Running containers
+* Pushing images to Docker Hub
+
+---
+
+## 👤 Author
 
 ```
-Name: Thiyagu S
-Role: Cloud & DevOps Learner
-Location: India 🇮🇳
-GitHub: Thiyagu-2003
+Name     : Thiyagu S
+Role     : Cloud & DevOps Learner
+Location : India 🇮🇳
+GitHub   : Thiyagu-2003
 ```
 
 ---
@@ -265,4 +277,5 @@ GitHub: Thiyagu-2003
 </p>
 
 ---
+
 
