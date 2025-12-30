@@ -274,6 +274,7 @@ No fluff. No filler. Pure practical Linux.
 | `yy`            | Copy line    |
 | `p`             | Paste        |
 | `u`             | Undo         |
+| `Ctrl + R`      | Redo         |
 | `/word`         | Search       |
 | `:%s/old/new/g` | Replace all  |
 | `gg`            | Top          |
@@ -325,3 +326,4 @@ Country: India 🇮🇳
 </p>
 
 ---
+
