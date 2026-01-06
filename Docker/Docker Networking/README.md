@@ -66,13 +66,13 @@ Using multiple containers is **not optional** in real applications.
 
 ```
 
-[ Browser ]
-|
-[ Frontend Container ]
-|
-[ Backend Container ]
-|
-[ Database Container ]
+              [ Browser ]
+                  |
+          [ Frontend Container ]
+                  |
+          [ Backend Container ]
+                  |
+          [ Database Container ]
 
 ````
 
@@ -240,3 +240,4 @@ GitHub  : Thiyagu-2003
 </p>
 
 ---
+
