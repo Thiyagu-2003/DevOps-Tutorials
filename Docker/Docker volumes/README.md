@@ -87,10 +87,6 @@ Example use cases:
 
 ## 📦 Types of Docker Storage (Important)
 
-I’m going to be blunt: your **idea is right**, but the **order and wording are wrong and sloppy**. Comparing volumes to “partition” and bind mounts to “link” is *half-true* and dangerous if left uncorrected. Interviewers will catch this instantly.
-
-Below is the **correct order, clean explanation, and precise analogy** — same meaning, but technically accurate.
-
 ---
 
 ### 1️⃣ Volume (RECOMMENDED)
@@ -281,6 +277,7 @@ GitHub  : Thiyagu-2003
 </p>
 
 ---
+
 
 
 
