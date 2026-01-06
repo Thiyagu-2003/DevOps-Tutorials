@@ -67,13 +67,13 @@ Containers are **ephemeral by design**.
 
 ```
 
-[ User ]
-|
+      [ User ]
+        |
 [ Application Container ]
-|
-[ Docker Volume ]
-|
-[ Persistent Data ]
+        |
+  [ Docker Volume ]
+        |
+  [ Persistent Data ]
 
 ````
 
@@ -281,5 +281,6 @@ GitHub  : Thiyagu-2003
 </p>
 
 ---
+
 
 
