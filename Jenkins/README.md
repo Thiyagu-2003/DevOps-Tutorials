@@ -31,7 +31,7 @@
 
 ---
 
-# 🟦 **1. Introduction to Jenkins**
+# **1. Introduction to Jenkins**
 
 ## 📌 What is Jenkins?
 
@@ -57,7 +57,7 @@ It automates:
 
 ---
 
-# 🟦 **2. CI/CD Fundamentals**
+# **2. CI/CD Fundamentals**
 
 ## 🔄 Continuous Integration (CI)
 
@@ -72,7 +72,7 @@ It automates:
 
 ---
 
-# 🟦 **3. Jenkins Architecture**
+# **3. Jenkins Architecture**
 
 | Component           | Role                            |
 | ------------------- | ------------------------------- |
@@ -87,7 +87,7 @@ Never overload the controller with builds in production.
 
 ---
 
-# 🟦 **4. Jenkins Installation & Setup**
+# **4. Jenkins Installation & Setup**
 
 | Method          | Description           |
 | --------------- | --------------------- |
@@ -105,7 +105,7 @@ Default Port: `8080`
 
 ---
 
-# 🟦 **5. Jenkins Jobs & Build Types**
+# **5. Jenkins Jobs & Build Types**
 
 ## 🔹 Freestyle Project
 
@@ -121,7 +121,7 @@ Automatically builds all branches.
 
 ---
 
-# 🟦 **6. Jenkins Pipelines (Declarative & Scripted)**
+# **6. Jenkins Pipelines (Declarative & Scripted)**
 
 ## ✅ Declarative Pipeline (Recommended)
 
@@ -155,7 +155,7 @@ node {
 
 ---
 
-# 🟦 **7. Credentials & Security**
+# **7. Credentials & Security**
 
 ## 🔐 Credentials Types
 
@@ -174,7 +174,7 @@ Best Practices:
 
 ---
 
-# 🟦 **8. Integrations (Docker, K8s, AWS)**
+# **8. Integrations (Docker, K8s, AWS)**
 
 Jenkins integrates with:
 
@@ -194,7 +194,7 @@ Example Flow:
 
 ---
 
-# 🟦 **9. CI/CD Architecture (Production Flow)**
+# **9. CI/CD Architecture (Production Flow)**
 
 ```
 Developer
@@ -227,7 +227,7 @@ Kubernetes / EC2
 
 ---
 
-# 🟦 **10. Production Best Practices**
+# **10. Production Best Practices**
 
 | Practice                    | Why            |
 | --------------------------- | -------------- |
@@ -241,7 +241,7 @@ Kubernetes / EC2
 
 ---
 
-# 🟦 **11. Common Interview Questions**
+# **11. Common Interview Questions**
 
 ### 1️⃣ What is Jenkins?
 
